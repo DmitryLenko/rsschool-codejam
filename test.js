@@ -8,17 +8,17 @@ describe('sumofother', () => {
   });
 
   it('arr2', () => {
-    const arr1 = sumOfOther();
-    assert.deepEqual(arr1, undefined);
+    const arr2 = sumOfOther();
+    assert.deepEqual(arr2, undefined);
   });
 
   it('arr3', () => {
-    const arr1 = sumOfOther([]);
-    assert.deepEqual(arr1, []);
+    const arr3 = sumOfOther([]);
+    assert.deepEqual(arr3, []);
   });
 
   it('arr4', () => {
-    const arr1 = sumOfOther([5, 2, 1, 7, 8]);
-    assert.deepEqual(arr1, [18, 21 , 22, 16, 15]);
+    const arr4 = sumOfOther([5, 2, 1, 7, 8]);
+    assert.deepEqual(arr4, [18, 21 , 22, 16, 15]);
   });
 });
