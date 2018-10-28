@@ -1,0 +1,26 @@
+{
+  "name": "make",
+  "version": "1.0.0",
+  "description": "dmitry",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryLenko/rsschool-codejam.git"
+  },
+  "author": "dmitry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DmitryLenko/rsschool-codejam/issues"
+  },
+  "homepage": "https://github.com/DmitryLenko/rsschool-codejam#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^13.1.0"
+  }
+}
