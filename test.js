@@ -21,7 +21,7 @@ describe('sumofother', () => {
 
   it('arr4', () => {
     const arr4 = sumOfOther([5, 2, 1, 7, 8]);
-    assert.deepEqual(arr4, [18, 21 , 22, 16, 15]);
+    assert.deepEqual(arr4, [18, 21, 22, 16, 15]);
   });
 });
 
@@ -35,8 +35,8 @@ describe('make', () => {
   });
 
   it('test2', () => {
-    function divide(a,b) {
-      return a-b;
+    function divide(a, b) {
+      return a - b;
     }
 
     const test2 = make(15)(41)(divide);
@@ -46,16 +46,18 @@ describe('make', () => {
 
 describe('recursion', () => {
   it('test1', () => {
-    const tree = {"value":100,"left":{"value":90,"left":{"value":70},"right":{"value":99}},"right":{"value":120,"left":{"value":110},"right":{"value":130}}};
+    const tree = {
+      value: 100,
+      left: { value: 90, left: { value: 70 }, right: { value: 99 } },
+      right: { value: 120, left: { value: 110 }, right: { value: 130 } },
+    };
     const array1 = recursion(tree);
-
-    assert.deepEqual(array1, [[100], [90, 120], [70,99,110,130]]);
+    assert.deepEqual(array1, [[100], [90, 120], [70, 99, 110, 130]]);
   });
 
   it('test2', () => {
-    const tree = {"value":100,"left":{"value":90,"right":{"value":120,"right":{"value":130}}}};
+    const tree = { value: 100, left: { value: 90, right: { value: 120, right: { value: 130 } } } };
     const array2 = recursion(tree);
-  
-    assert.deepEqual(array2, [[100], [90,120,130]]);
+    assert.deepEqual(array2, [[100], [90, 120, 130]]);
   });
 });
