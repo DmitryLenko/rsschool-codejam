@@ -1,11 +1,14 @@
-module.exports = function recursion(tree, index = 0, res = []) {
-  if (res[index] === undefined) res[index] = [];
-  res[index].push(tree.value);
+module.exports = function recursion(tree, index = 0, result = []) {
+  if (result[index] === undefined) {
+    result[index] = [];
+  }
+  result[index].push(tree.value);
+  const indx = 1 + index;
   if (typeof tree.left === 'object') {
-    recursion(tree.left, 1 + index, res);
+    recursion(tree.left, indx, result);
   }
   if (typeof tree.right === 'object') {
-    recursion(tree.right, index, res);
+    recursion(tree.right, indx, result);
   }
-  return res;
+  return result;
 };
