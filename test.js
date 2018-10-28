@@ -58,6 +58,6 @@ describe('recursion', () => {
   it('test2', () => {
     const tree = { value: 100, left: { value: 90, right: { value: 120, right: { value: 130 } } } };
     const array2 = recursion(tree);
-    assert.deepEqual(array2, [[100], [90, 120, 130]]);
+    assert.deepEqual(array2, [[100], [90], [120], [130]]);
   });
 });
