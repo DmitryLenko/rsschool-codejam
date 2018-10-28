@@ -1,6 +1,7 @@
 const assert = require('assert');
 const sumOfOther = require('./src/sum-of-other');
 const make = require('./src/make');
+const recursion = require('./src/recursion');
 
 describe('sumofother', () => {
   it('arr1', () => {
@@ -40,5 +41,21 @@ describe('make', () => {
 
     const test2 = make(15)(41)(divide);
     assert.deepEqual(test2, -26);
+  });
+});
+
+describe('recursion', () => {
+  it('test1', () => {
+    const tree = {"value":100,"left":{"value":90,"left":{"value":70},"right":{"value":99}},"right":{"value":120,"left":{"value":110},"right":{"value":130}}};
+    const array1 = recursion(tree);
+
+    assert.deepEqual(array1, [[100], [90, 120], [70,99,110,130]]);
+  });
+
+  it('test2', () => {
+    const tree = {"value":100,"left":{"value":90,"right":{"value":120,"right":{"value":130}}}};
+    const array2 = recursion(tree);
+  
+    assert.deepEqual(array2, [[100], [90,120,130]]);
   });
 });
